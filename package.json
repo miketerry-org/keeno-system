@@ -1,18 +1,19 @@
 {
   "name": "keeno-system",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "system related utilities",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "dev": "NODE_ENV=dev nodemon index.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://miketerry-org/sysutils"
+    "url": "https://miketerry-org/keeno-system"
   },
   "keywords": [
+    "keeno",
     "system",
-    "utilties",
+    "utilities",
     "environment",
     "paths"
   ],
