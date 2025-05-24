@@ -10,6 +10,10 @@ const {
   isProduction,
   isTesting,
 } = require("./lib/envMode");
+const coercePrimitive = require("./lib/coercePrimitive");
+
+//!!mike, remove this later
+const BaseConfig = require("./lib/baseConfig");
 
 // convenient global variable for application start directory
 const __workdir = process.cwd();
@@ -45,6 +49,7 @@ module.exports = {
   fatal,
   halt,
   findFiles,
+  coercePrimitive,
   log,
   setLog,
 };
