@@ -3,17 +3,20 @@
 "use strict";
 
 // load all necessary modules
+const coercePrimitive = require("./lib/coercePrimitive");
+const copyFiles = require("./lib/copyFiles");
 const findFiles = require("./lib/findFiles");
+const createDirectories = require("./lib/createDirectories");
+const excludeLeadPath = require("./lib/excludeLeadPath");
+const extractFilename = require("./lib/extractFilename");
+const extractFilePath = require("./lib/extractFilePath");
+const runCommand = require("./lib/runCommand");
 const {
   envMode,
   isDevelopment,
   isProduction,
   isTesting,
 } = require("./lib/envMode");
-const coercePrimitive = require("./lib/coercePrimitive");
-
-//!!mike, remove this later
-const BaseConfig = require("./lib/baseConfig");
 
 // convenient global variable for application start directory
 const __workdir = process.cwd();
@@ -49,7 +52,13 @@ module.exports = {
   fatal,
   halt,
   findFiles,
+  copyFiles,
+  createDirectories,
+  excludeLeadPath,
+  extractFilename,
+  extractFilePath,
   coercePrimitive,
   log,
   setLog,
+  runCommand,
 };
