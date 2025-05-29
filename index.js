@@ -10,6 +10,7 @@ const createDirectories = require("./lib/createDirectories");
 const excludeLeadPath = require("./lib/excludeLeadPath");
 const extractFilename = require("./lib/extractFilename");
 const extractFilePath = require("./lib/extractFilePath");
+const getDestinationFiles = require("./lib/getDestinationFiles");
 const runCommand = require("./lib/runCommand");
 const {
   envMode,
@@ -22,7 +23,7 @@ const {
 const __workdir = process.cwd();
 
 // global logging object
-const log = console;
+let log = console;
 
 // replace the global logger
 function setLog(value) {
@@ -58,6 +59,7 @@ module.exports = {
   extractFilename,
   extractFilePath,
   coercePrimitive,
+  getDestinationFiles,
   log,
   setLog,
   runCommand,
